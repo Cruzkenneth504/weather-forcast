@@ -24,14 +24,12 @@ body {
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
+  
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2
+ {
   font-weight: 700;
   margin: 0;
   color: var(--dark);
@@ -156,4 +154,31 @@ p {
   border: none;
   box-shadow: 0 10px 6px -6px #777;
  }
+/* selected city forcast display*/
+ .today-forecast{
+  border: 2px #070707 solid;
+  margin-top: 30px;
+  border-radius: 10px;
+  
+ }
 
+/* date-cards */
+.day-1,
+.day-2,
+.day-3,
+.day-4,
+.day-5 
+{
+background: linear-gradient(118deg, rgba(32,34,87,1) 0%, 
+rgba(26,37,140,1) 84%,
+rgba(0,0,93,1) 99%,
+rgba(3,3,80,1) 99%,
+rgba(0,0,0,1) 100%);
+
+margin: 10px;
+height: 200px;
+border-radius: 10px;
+color: #fff;
+box-shadow:0 10px 6px -6px #777; 
+
+}
