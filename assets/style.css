@@ -1,0 +1,159 @@
+:root {
+  --primary: #ffffff;
+  --dark: #070707;
+  --border-radius: 0.3rem;
+  --background: linear-gradient(118deg, rgba(38,57,207,1) 0%, 
+  rgba(31,30,135,1) 25%,
+  rgba(11,36,153,1) 37%, 
+  rgba(15,55,193,0.9037990196078431) 58%, 
+  rgba(0,0,0,1) 100%);
+  --bglightdark:linear-gradient(118deg, rgba(89,89,89,1) 0%,
+  rgba(38,38,42,1) 30%, rgba(59,60,61,1) 37%,
+  rgba(76,76,78,0.7497373949579832) 58%,
+  rgba(0,0,0,1) 92%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+  color: var(--dark);
+  line-height: 1.25;
+}
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 6px 5px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border: 2px solid;
+  background: var(--background);
+  background-size: 200% 100%;
+  background-position: bottom left;
+  transition: all .7s ease-out;
+  color: white;
+  border-radius: 10px;
+ 
+  
+}
+
+.btn:hover {
+  border: none;
+  background-position: bottom right;
+  color: #fff;
+  box-shadow: 0 10px 6px -6px #777;
+  
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.hero {
+  padding: 3% 4%;
+  padding: 3% 4%;
+  background: var(--background);
+  color: var(--primary);
+}
+
+.hero p {
+  max-width: 75%;
+}
+
+
+
+.icon-danger {
+  color: rgb(255, 70, 70);
+}
+
+.icon-success {
+  color: rgb(29, 153, 255);
+}
+
+/* CARDS */
+.card {
+  margin: 0 0 20px 0;
+  border: none;
+  
+}
+
+.card-header {
+  color: var(--dark);
+  background: transparent;
+  padding: 2.5%;
+}
+
+.card-body {
+  padding: 2.5%;
+}
+
+
+.form-label,
+.form-input,
+.form-textarea {
+  display: block;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  margin: 0 0 0 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 3%;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border: 2px solid darkgray;
+  border-radius: var(--border-radius);
+}
+
+.btn-list{
+  font-size: 1.3rem;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border: none;
+  background: var(--bglightdark);
+  background-size: 200% 100%;
+  background-position: bottom left;
+  transition: all .7s ease-out;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+ .btn-list:hover{
+  border: none;
+  box-shadow: 0 10px 6px -6px #777;
+ }
+
