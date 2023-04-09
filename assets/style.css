@@ -29,7 +29,8 @@ body {
 
 h1,
 h2
- {
+
+{
   font-weight: 700;
   margin: 0;
   color: var(--dark);
@@ -43,8 +44,12 @@ main {
 
 p {
   font-size: 1.2rem;
+  text-align: start;
+  padding-top: 1.0rem;
 }
 
+
+/* btn style*/
 .btn {
   font-size: 1.3rem;
   text-decoration: none;
@@ -58,17 +63,14 @@ p {
   background-position: bottom left;
   transition: all .7s ease-out;
   color: white;
-  border-radius: 10px;
- 
-  
+  border-radius: 10px; 
 }
 
 .btn:hover {
   border: none;
   background-position: bottom right;
   color: #fff;
-  box-shadow: 0 10px 6px -6px #777;
-  
+  box-shadow: 0 10px 6px -6px #777;  
 }
 
 .btn-inline {
@@ -80,20 +82,6 @@ p {
   padding: 3% 4%;
   background: var(--background);
   color: var(--primary);
-}
-
-.hero p {
-  max-width: 75%;
-}
-
-
-
-.icon-danger {
-  color: rgb(255, 70, 70);
-}
-
-.icon-success {
-  color: rgb(29, 153, 255);
 }
 
 /* CARDS */
@@ -111,6 +99,9 @@ p {
 
 .card-body {
   padding: 2.5%;
+  border-bottom: 3px ridge black;
+  border-radius: 3px;
+  
 }
 
 
@@ -149,6 +140,7 @@ p {
   border-radius: 10px;
   text-align: center;
   
+  
 }
  .btn-list:hover{
   border: none;
@@ -176,9 +168,14 @@ rgba(3,3,80,1) 99%,
 rgba(0,0,0,1) 100%);
 
 margin: 10px;
-height: 200px;
+height: 300px;
 border-radius: 10px;
 color: #fff;
 box-shadow:0 10px 6px -6px #777; 
-
+font-weight: 100;
+font-size: medium;
+padding: 0.5rem;
+font-size: small;
+width: 110%;
 }
+

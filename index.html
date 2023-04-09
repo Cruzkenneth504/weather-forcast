@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/style.css" >
   <title>Weather Forcast</title>
 </head>
-<body class="flex-column min-vh-100">
+<body class="flex-column  min-vh-100 justify-content-between">
   <header class="hero bg-primary text-center">
   <h1 class="app-title fs-1 fw-bold text-light">Weather Dashboard</h1>
  </header>
@@ -22,24 +22,25 @@
     <div class="card col-4"> 
       <h2 class="card-header text-uppercase fw-bold">Search for a City</h2>
       <form id="user-form" class="card-body">
-          <label class="form-label" for="username"></label>
+          <label class="form-label text-start fw-normal" for="username">City</label>
           <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-        <button type="submit" class="btn">Search</button>
+        <button id="search-btn" type="submit" class="btn">Search</button>
       </form>
    </div>
 <!---col#2 for presentday-->
       <div class="today-forecast col-8">
-         <h2 class="text-start">City☀️</h2>
-      <div class="weather">
+         <h2 class="text-start">City 00/00/0000☀️</h2>
+         <p>Temp:</p>
+         <p>Wind:</p>
+         <p>Humidity:</p>
  </div>
-    
-  </div>
-
+  
 <!--col#3 btns to be display on click -->
     <div class="col-4">
       <div id="language-buttons" class="card-body">
-        <button data-language="javascript" class="btn btn-list">San Francisco</button>
-        <!--btn list-->
+        <button id="city-btn" data-language="javascript" class="btn btn-list"></button>
+      
+        <!--btn list add with js-->
       </div>
     </div>
 
@@ -47,17 +48,50 @@
 <!--col# 5 day forecast-->  
   <div class="col-8 text-start">
     <h3 class="fw-bold">5-Day forecast</h3>
-    <div class="day-forecast row row-col">
-      <div class="day-1 col"> date ☀️ </div>
-      <div class="day-2 col"> date ☀️ </div>
-      <div class="day-3 col"> date ☀️ </div>
-      <div class="day-4 col"> date ☀️ </div>
-      <div class="day-5 col"> date ☀️ </div>
-    </div>
-  </div>
-</main>
+    <div class="week-forecast row row-col">
+       
+      <!--5 week card-->
+      <div class="day-1 col"> 
+         <h4>00/00/00 ☀️</h4> 
+         <p>Temp:</p>
+         <p>Wind:</p>
+         <p>Humidity:</p>
+        </div>
+
+      <div class="day-2 col"> 
+        <h4>00/00/00 ☀️</h4> 
+           <p>Temp:</p>
+           <p>Wind:</p>
+           <p>Humidity:</p>
+        </div>
+
+      <div class="day-3 col">
+        <h4>00/00/00 ☀️</h4> 
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </div>
+
+      <div class="day-4 col"> 
+        <h4>00/00/00 ☀️</h4> 
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </div>
+        
+      <div class="day-5 col">
+         <h4>00/00/00 ☀️</h4> 
+         <p>Temp:</p>
+         <p>Wind:</p>
+         <p>Humidity:</p>
+        </div>
+     </div>
+   </div>
+   
+  </main>
 
 </body>
+
 </html>
 
 
