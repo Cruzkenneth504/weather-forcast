@@ -18,16 +18,16 @@ function getForcast(lat, lon, cityName){
     console.log(data)
     
     var temp = data.list[0].main.temp
-    document.getElementById("temp").textContent = temp
+    document.getElementById("temp").textContent = temp + " ℉" 
     
     var date = dayjs(data.list[0].dt_txt).format('MM/DD/YYYY');
-    document.getElementById("city-name").textContent = cityName + " " + date
+    document.getElementById("city-name").textContent = cityName + " " + date + " ☀️"
     
     var wind = data.list[0].wind.speed
-    document.getElementById("wind").textContent = wind
+    document.getElementById("wind").textContent = wind 
 
     var humidity = data.list[0].main.humidity
-    document.getElementById("humidity").textContent = humidity 
+    document.getElementById("humidity").textContent = humidity + " %"
     
     weekForcast(data.list)
   
@@ -37,15 +37,18 @@ function getForcast(lat, lon, cityName){
 function weekForcast (list) {
 let dayCounter = 1;
 for (let i = 7; i < list.length; i+=8) {
+
   const currentDay = list[i];
   var date = dayjs(currentDay.dt_txt).format('MM/DD/YYYY');
   var temp = currentDay.main.temp;
+  var wind = currentDay.wind.speed;
+  var humidity = currentDay.main.humidity;
 
   document.getElementById(`day-${dayCounter}`).innerHTML = `
   <h4>${date}☀️</h4> 
-  <p>Temp: ${temp}</p>
-  <p>Wind:</p>
-  <p>Humidity:</p>
+  <p>Temp: ${temp}℉</p>
+  <p>Wind: ${wind}</p>
+  <p>Humidity: ${humidity}%</p>
   `
 
   dayCounter++;
@@ -55,7 +58,16 @@ for (let i = 7; i < list.length; i+=8) {
 
 document.getElementById("search-btn").addEventListener('click', function (e) {
   e.preventDefault();
-  var cityName = document.getElementById("username").value;
+  var cityName = document.getElementById("cityName").value;
+
+  let addBtn = document.createElement('button');
+  addBtn.classList.add("btn-list");
+  addBtn.innerText = cityName.value;
+  document.getElementById("language-buttons").appendChild(addBtn);
+  cityName.value
+
 
   getWeather(cityName)
 })
+
+
