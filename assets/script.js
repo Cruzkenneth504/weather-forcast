@@ -21,15 +21,20 @@ function getForcast(lat, lon, cityName){
     document.getElementById("temp").textContent = temp + " ℉" 
     
     var date = dayjs(data.list[0].dt_txt).format('MM/DD/YYYY');
-    document.getElementById("city-name").textContent = cityName + " " + date + " ☀️"
+    document.getElementById("city-name").textContent = cityName + " " + date
     
     var wind = data.list[0].wind.speed
     document.getElementById("wind").textContent = wind 
 
     var humidity = data.list[0].main.humidity
     document.getElementById("humidity").textContent = humidity + " %"
-    
+
+    var icon = data.list[0].weather[0].icon
+    document.getElementById("icon").setAttribute("src", `https://openweathermap.org/img/wn/${icon}@2x.png`);
+
+
     weekForcast(data.list)
+
   
   })
 }
@@ -43,9 +48,10 @@ for (let i = 7; i < list.length; i+=8) {
   var temp = currentDay.main.temp;
   var wind = currentDay.wind.speed;
   var humidity = currentDay.main.humidity;
+  var icon = currentDay.weather.icon;
 
   document.getElementById(`day-${dayCounter}`).innerHTML = `
-  <h4>${date}☀️</h4> 
+  <h4>${date}<span><img src ="https://openweathermap.org/img/wn/${icon}@2x.png"></span></h4> 
   <p>Temp: ${temp}℉</p>
   <p>Wind: ${wind}</p>
   <p>Humidity: ${humidity}%</p>
@@ -54,20 +60,40 @@ for (let i = 7; i < list.length; i+=8) {
   dayCounter++;
 }
 
+
+
+
+
+}
+
+function addCity (cityName) {
+  var savedCities = JSON.parse(localStorage.getItem("cityWeather")) || []
+  savedCities.push(cityName)
+  localStorage.setItem("cityWeather", JSON.stringify(savedCities))
+}
+
+function showSavedCities() {
+  savedCites = JSON.parse(localStorage.getItem("cityWeather"))
+  buttonHTML = ``
+  for(var i =0; i< savedCites.length;i++){
+    currentCity =  savedCites[i]
+    buttonHTML += `<button class=btn onclick=getWeather('${currentCity}')>${currentCity}</button>`
+}
+  //get cities from local storage
+  //create buttonHTML variable
+  //loop through saved cites and add button to html
+  //update innerhtml of city-buttons
+
+
+
 }
 
 document.getElementById("search-btn").addEventListener('click', function (e) {
   e.preventDefault();
   var cityName = document.getElementById("cityName").value;
 
-  let addBtn = document.createElement('button');
-  addBtn.classList.add("btn-list");
-  addBtn.innerText = cityName.value;
-  document.getElementById("language-buttons").appendChild(addBtn);
-  cityName.value
-
-
-  getWeather(cityName)
+  getWeather(cityName);
+  addCity(cityName)
 })
 
 
