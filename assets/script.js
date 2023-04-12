@@ -16,10 +16,10 @@ function getForcast(lat, lon, cityName){
   .then(res => res.json())
   .then(data => {
     console.log(data)
-    //retrive data to add content//
+    //retrive data to add content [0] refers to which array we retrieve data from//
     var temp = data.list[0].main.temp
     document.getElementById("temp").textContent = temp + " ℉" 
-    
+    //days for current date to display//
     var date = dayjs(data.list[0].dt_txt).format('MM/DD/YYYY');
     document.getElementById("city-name").textContent = cityName + " " + date
     
