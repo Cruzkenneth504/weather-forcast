@@ -126,7 +126,7 @@ p {
   border-radius: var(--border-radius);
 }
 
-.btn-list{
+button{
   font-size: 1.3rem;
   text-decoration: none;
   width: 100%;
@@ -143,10 +143,11 @@ p {
   
   
 }
- .btn-list:hover{
+ .buttons:hover{
   border: none;
   box-shadow: 0 10px 6px -6px #777;
  }
+
 /* selected city forcast display*/
  .today-forecast{
   border: 2px #070707 solid;
