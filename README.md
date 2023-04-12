@@ -66,7 +66,7 @@ function getWeather(cityName) {
 | HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|  
 | CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)      |   
 | Git | [https://git-scm.com/](https://git-scm.com/)     |    
-| Js  | [https://developer.mozilla.org/en-US/docs/Web/JavaScript]  | 
+| Js  | [https://developer.mozilla.org/en-US/docs/Web/JavaScript] (https://developer.mozilla.org/en-US/docs/Web/JavaScript) | 
 |  Bootstrap  | [https://getbootstrap.com/](https://getbootstrap.com/)  | 
 
 ## **Prerequisites**
@@ -93,7 +93,7 @@ function getWeather(cityName) {
 * [HTML W3](https://www.w3schools.com/html/default.asp)   
 * [CSS Dev](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [CSS W3](https://www.w3schools.com/css/default.asp)
-* [JS]()
+* [JS](https://www.javascript.com/learn)
 * [Bootstrap](https://getbootstrap.com/)
 * [Weather API](https://openweathermap.org/api)
 
