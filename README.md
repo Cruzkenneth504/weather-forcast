@@ -15,7 +15,7 @@ The goal of this project is to create a website that will retrieve weather data 
 
 ## **Code Learning Points**
 
-- * Learning point comments have been added to documents. Example below:  
+- * Documents have been updated with learning point comments. As an illustration:  
 
 ### 
 
@@ -34,7 +34,7 @@ function getWeather(cityName) {
 }
 ```
 
-- * Comments properly added to html to give reader a much better visual undertanding of the code.
+- * HTML appropriately enhanced with comments to provide readers a much clearer understanding of the code.
 
 ```html
 <body class="flex-column  min-vh-100 justify-content-between">
