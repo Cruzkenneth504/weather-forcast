@@ -99,7 +99,7 @@ function getWeather(cityName) {
 
 ## **Visual**
 
-* Click the image below 
+* Click the image below for webside testing. Just type inside the input box your favorite city.
 
 [![Image](./assets/imgs/weather.png)](https://cruzkenneth504.github.io/weather-forcast/)
 
