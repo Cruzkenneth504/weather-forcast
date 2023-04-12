@@ -2,7 +2,7 @@
 
 
 ## **Description**
-* APIs are required to connect apps and carry out a predefined function that is based on sharing data and running pre-defined operations. They operate as a go-between, enabling programmers to create fresh programmatic interactions across the many programs that consumers and companies use on a daily basis.
+*## APIs are required to connect apps and carry out a predefined function that is based on sharing data and running pre-defined operations. They operate as a go-between, enabling programmers to create fresh programmatic interactions across the many programs that consumers and companies use on a daily basis.
 The goal of this project is to create a website that will retrieve weather data based on the city you select.
 
 
